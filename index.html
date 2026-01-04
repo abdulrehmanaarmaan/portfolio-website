@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Rehman Aarmaan | Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DaisyUI Plugin -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Nunito Sans"', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [daisyui],
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
+
+        <!-- Desktop Links -->
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Links -->
+      <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 text-gray-700 p-4 bg-white shadow-lg">
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gray-50">
+      <img src="assets/images/profile.jpg" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-4">
+
+      <h1 class="text-4xl font-bold text-gray-800">Abdul Rehman Aarmaan</h1>
+      <p class="text-xl text-gray-600 mb-4">Full Stack Developer</p>
+
+      <div class="flex space-x-4">
+        <!-- Resume button -->
+        <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+
+        <!-- Social Links -->
+        <a href="https://github.com/abdulrehmanaarmaan" target="_blank" class="btn btn-outline">GitHub</a>
+        <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan/" target="_blank" class="btn btn-outline">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-6">About Me</h2>
+        <p class="text-gray-700 mb-4">
+          I am a passionate full stack developer with experience in creating responsive web interfaces.
+          My programming journey started 2 years ago, and I enjoy building clean, functional, and modern websites.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Outside programming, I enjoy sports, painting, and exploring new technologies. I always aim to improve
+          my skills and take on challenging projects that allow me to grow.
+        </p>
+      </div>
+    </section>
+
+    <div id='skills'>
+      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Frontend -->
+        <div class="p-4 bg-white rounded shadow">
+          <h3 class="font-bold mb-2">Frontend</h3>
+          <ul class="text-gray-600">
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>Tailwind CSS, DaisyUI</li>
+            <li>React (Optional for Projects)</li>
+          </ul>
+        </div>
+
+        <!-- Backend -->
+        <div class="p-4 bg-white rounded shadow">
+          <h3 class="font-bold mb-2">Backend</h3>
+          <ul class="text-gray-600">
+            <li>Node.js, Express.js</li>
+            <li>MongoDB</li>
+            <li>Firebase (Optional)</li>
+          </ul>
+        </div>
+
+        <!-- Tools -->
+        <div class="p-4 bg-white rounded shadow">
+          <h3 class="font-bold mb-2">Tools</h3>
+          <ul class="text-gray-600">
+            <li>Git, GitHub</li>
+            <li>VS Code, Postman</li>
+            <li>Figma, Chrome DevTools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects" class="py-20 bg-white">
+      <div class="container mx-auto max-w-5xl">
+        <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Project 1 -->
+          <div class="card bg-gray-50 shadow rounded overflow-hidden">
+            <img src="assets/images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold mb-2 text-lg">E-commerce Website</h3>
+              <a href="project-1.html" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card bg-gray-50 shadow rounded overflow-hidden">
+            <img src="assets/images/project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold mb-2 text-lg">Chat Application</h3>
+              <a href="project-2.html" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card bg-gray-50 shadow rounded overflow-hidden">
+            <img src="assets/images/project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold mb-2 text-lg">Portfolio Website</h3>
+              <a href="project-3.html" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+
+        <p class="text-gray-700 mb-2">Email: <a href="mailto:youremail@example.com"
+            class="text-blue-500">abdulrehmanaarmaan@gmail.com</a></p>
+        <p class="text-gray-700 mb-2">Phone: <a href="tel:+880123456789" class="text-blue-500">+8801337910777</a></p>
+        <p class="text-gray-700 mb-2">WhatsApp: <a href="https://wa.me/880123456789" target="_blank"
+            class="text-blue-500">Chat on WhatsApp</a></p>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <footer class="bg-white py-6 text-center text-gray-600">
+    © 2026 Abdul Rehman Aarmaan. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
