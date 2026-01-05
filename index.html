@@ -13,6 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- DaisyUI Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -25,22 +26,32 @@
       plugins: [daisyui],
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
 
-  <header>
-    <nav class="bg-white shadow-lg fixed w-full z-50">
+  <header class="">
+    <nav class="bg-white/90 backdrop/blur border-b border-gray-200 fixed w-full z-50 transition-all">
       <div class="container mx-auto flex justify-between items-center p-4">
         <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
 
         <!-- Desktop Links -->
         <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#about" class="hover:text-blue-500">About</a></li>
-          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+          <li><a href="#about"
+              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">About</a>
+          </li>
+          <li><a href="#skills"
+              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Skills</a>
+          </li>
+          <li><a href="#projects"
+              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Projects</a>
+          </li>
+          <li><a href="#contact"
+              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Contact</a>
+          </li>
         </ul>
 
         <!-- Mobile Menu Button -->
@@ -65,101 +76,200 @@
 
   </header>
 
-  <main>
-    <section id="hero" class="h-screen flex flex-col justify-center items-center text-center bg-gray-50">
-      <img src="assets/images/profile.jpg" alt="Profile" class="w-40 h-40 rounded-full shadow-lg mb-4">
+  <main class="">
+    <section id="hero"
+      class="md:min-h-screen flex flex-col justify-center items-center text-center bg-gray-50 bg-gradient-to-r from-blue-50 via-white to-green-50 md:py-0 py-20">
+      <img src="./assets/images/profile.jpg" alt="Profile"
+        class="w-40 h-40 rounded-full shadow-lg mb-6 object-cover border-4 border-white">
 
-      <h1 class="text-4xl font-bold text-gray-800">Abdul Rehman Aarmaan</h1>
-      <p class="text-xl text-gray-600 mb-4">Full Stack Developer</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-2 animate-fade-in">Abdul Rehman Aarmaan</h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-4">Full Stack Developer</p>
 
-      <div class="flex space-x-4">
+      <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
         <!-- Resume button -->
-        <a href="assets/resume.pdf" download class="btn btn-primary">Download Resume</a>
+        <a href="" class="btn btn-primary hover:scale-105 transition-transform shadow-md hover:shadow-xl">Download
+          Resume</a>
 
         <!-- Social Links -->
-        <a href="https://github.com/abdulrehmanaarmaan" target="_blank" class="btn btn-outline">GitHub</a>
-        <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan/" target="_blank" class="btn btn-outline">LinkedIn</a>
+        <a href="https://github.com/abdulrehmanaarmaan" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline hover:bg-gray-100 transition" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank" rel="noopener noreferrer"
+          class="btn btn-outline hover:bg-gray-100 transition">LinkedIn</a>
       </div>
     </section>
 
-    <section id="about" class="py-20 bg-white">
-      <div class="container mx-auto max-w-3xl text-center">
+    <section id="about" class="md:py-20 py-16 bg-white">
+      <div class="container mx-auto max-w-3xl text-center px-4">
         <h2 class="text-3xl font-bold mb-6">About Me</h2>
         <p class="text-gray-700 mb-4">
-          I am a passionate full stack developer with experience in creating responsive web interfaces.
-          My programming journey started 2 years ago, and I enjoy building clean, functional, and modern websites.
+          I am a passionate full stack developer with hands-on experience building responsive web applications using
+          modern technologies. I began my programming journey around ten months ago and enjoy turning ideas into clean,
+          functional and visually appealing products.
         </p>
         <p class="text-gray-700 mb-4">
-          Outside programming, I enjoy sports, painting, and exploring new technologies. I always aim to improve
-          my skills and take on challenging projects that allow me to grow.
+          Outside of coding, I enjoy sports and learning new technologies and I’m always motivated to grow through
+          hands-on projects.
         </p>
       </div>
     </section>
 
-    <div id='skills'>
-      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Frontend -->
-        <div class="p-4 bg-white rounded shadow">
-          <h3 class="font-bold mb-2">Frontend</h3>
-          <ul class="text-gray-600">
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>Tailwind CSS, DaisyUI</li>
-            <li>React (Optional for Projects)</li>
-          </ul>
-        </div>
+    <div id='skills' class="md:py-20 py-16 bg-gray-50">
+      <div class="container mx-auto max-w-5xl text-center">
+        <h2 class="text-3xl font-bold mb-6">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+          <!-- Frontend -->
+          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold mb-2 text-lg">Frontend</h3>
 
-        <!-- Backend -->
-        <div class="p-4 bg-white rounded shadow">
-          <h3 class="font-bold mb-2">Backend</h3>
-          <ul class="text-gray-600">
-            <li>Node.js, Express.js</li>
-            <li>MongoDB</li>
-            <li>Firebase (Optional)</li>
-          </ul>
-        </div>
+            <!-- HTML / CSS -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">HTML & CSS</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-green-500 rounded" style="width: 90%;"></div>
+              </div>
+            </div>
 
-        <!-- Tools -->
-        <div class="p-4 bg-white rounded shadow">
-          <h3 class="font-bold mb-2">Tools</h3>
-          <ul class="text-gray-600">
-            <li>Git, GitHub</li>
-            <li>VS Code, Postman</li>
-            <li>Figma, Chrome DevTools</li>
-          </ul>
+            <!-- JavaScript -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">JavaScript</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-yellow-500 rounded" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <!-- React -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">React</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-blue-500 rounded" style="width: 70%;"></div>
+              </div>
+            </div>
+
+            <div class="mb-3 text-left">
+              <span class="font-medium">Next.js</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-purple-500 rounded" style="width: 60%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Backend -->
+          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold mb-2 text-lg">Backend</h3>
+
+            <!-- Node.js -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">Node.js</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-green-500 rounded" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <!-- Express.js -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">Express.js</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-yellow-500 rounded" style="width: 75%;"></div>
+              </div>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">MongoDB</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-blue-500 rounded" style="width: 70%;"></div>
+              </div>
+            </div>
+
+            <div class="mb-3 text-left">
+              <span class="font-medium">Firebase</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-orange-500 rounded" style="width: 65%;"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Tools -->
+          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+            <h3 class="font-bold mb-2 text-lg">Tools</h3>
+
+            <!-- Git / GitHub -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">Git & GitHub</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-green-500 rounded" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- VS Code / Postman -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">VS Code & Postman</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-yellow-500 rounded" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <!-- Figma / DevTools -->
+            <div class="mb-3 text-left">
+              <span class="font-medium">Figma & Chrome DevTools</span>
+              <div class="w-full h-2 bg-gray-200 rounded mt-1">
+                <div class="h-2 bg-blue-500 rounded" style="width: 70%;"></div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
 
-    <section id="projects" class="py-20 bg-white">
+    <section id="projects" class="md:py-20 py-16 bg-white">
       <div class="container mx-auto max-w-5xl">
         <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
           <!-- Project 1 -->
-          <div class="card bg-gray-50 shadow rounded overflow-hidden">
-            <img src="assets/images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <h3 class="font-bold mb-2 text-lg">E-commerce Website</h3>
-              <a href="project-1.html" class="btn btn-sm btn-primary">View Details</a>
+          <div
+            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
+            <img src="./assets/images/project1.png" alt="Project 1" class="w-full h-48 object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
+              <h3 class="font-bold mb-2 text-lg">AssetVerse</h3>
+              <p class="text-sm mb-4 text-center">
+                An interactive platform for managing environmental assets.
+              </p>
+              <a href="project-1.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
 
           <!-- Project 2 -->
-          <div class="card bg-gray-50 shadow rounded overflow-hidden">
-            <img src="assets/images/project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <h3 class="font-bold mb-2 text-lg">Chat Application</h3>
-              <a href="project-2.html" class="btn btn-sm btn-primary">View Details</a>
+          <div
+            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
+            <img src="./assets/images/project2.png" alt="Project 2" class="w-full h-48 object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
+              <h3 class="font-bold mb-2 text-lg">Hero Apps</h3>
+              <p class="text-sm mb-4 text-center">
+                A web-based app store platform that allows users to browse, explore, and interact with a variety of
+                applications in a modern, responsive interface.
+              </p>
+              <a href="project-2.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
 
           <!-- Project 3 -->
-          <div class="card bg-gray-50 shadow rounded overflow-hidden">
-            <img src="assets/images/project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
-            <div class="p-4">
-              <h3 class="font-bold mb-2 text-lg">Portfolio Website</h3>
-              <a href="project-3.html" class="btn btn-sm btn-primary">View Details</a>
+          <div
+            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
+            <img src="./assets/images/project3.png" alt="Project 3" class="w-full h-48 object-cover">
+            <div
+              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
+              <h3 class="font-bold mb-2 text-lg">Green Earth</h3>
+              <p class="text-sm mb-4 text-center">
+                An eco-focused platform promoting sustainable practices and
+                environmental awareness through interactive features.
+              </p>
+              <a href="project-3.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
@@ -170,21 +280,35 @@
       <div class="container mx-auto max-w-3xl text-center">
         <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
 
-        <p class="text-gray-700 mb-2">Email: <a href="mailto:youremail@example.com"
-            class="text-blue-500">abdulrehmanaarmaan@gmail.com</a></p>
-        <p class="text-gray-700 mb-2">Phone: <a href="tel:+880123456789" class="text-blue-500">+8801337910777</a></p>
-        <p class="text-gray-700 mb-2">WhatsApp: <a href="https://wa.me/880123456789" target="_blank"
-            class="text-blue-500">Chat on WhatsApp</a></p>
+        <p class="text-gray-700 mb-2">Email: <a href="mailto:abdulrehmanaarmaan@gmail.com"
+            class="text-blue-500 hover:underline">abdulrehmanaarmaan@gmail.com</a></p>
+        <p class="text-gray-700 mb-2">Phone/WhatsApp: <a href="https://wa.me/8801337910777"
+            class="text-blue-500 hover:underline">+8801337910777</a></p>
+
+        <form class="mt-6 flex flex-col space-y-4 px-4">
+          <input type="text" placeholder="Your Name" class="p-3 border rounded">
+          <input type="email" placeholder="Your Email" class="p-3 border rounded">
+          <textarea placeholder="Your Message" class="p-3 border rounded"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
       </div>
     </section>
-
-
   </main>
 
-
-  <footer class="bg-white py-6 text-center text-gray-600">
-    © 2026 Abdul Rehman Aarmaan. All rights reserved.
+  <footer class="border-t py-6 text-sm text-gray-500 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <p>© 2026 Abdul Rehman Aarmaan</p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a class="hover:text-gray-900 transition" target="_blank"
+          href="https://github.com/abdulrehmanaarmaan">GitHub</a>
+        <a class="hover:text-gray-900 transition" target="_blank"
+          href="https://www.linkedin.com/in/abdul-rehman-aarmaan">LinkedIn</a>
+      </div>
+    </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 
 </body>
 

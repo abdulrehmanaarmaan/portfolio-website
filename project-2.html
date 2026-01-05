@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Apps | Project Details</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Nunito Sans"', 'sans-serif'],
+                    },
+                },
+            },
+            plugins: [daisyui],
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="bg-white/90 backdrop/blur border-b border-gray-200 fixed w-full z-50 transition-all">
+            <div class="container mx-auto flex justify-between items-center p-4">
+                <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
+                <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+                    <li><a href="index.html#about"
+                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">About</a>
+                    </li>
+                    <li><a href="index.html#skills"
+                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Skills</a>
+                    </li>
+                    <li><a href="index.html#projects"
+                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Projects</a>
+                    </li>
+                    <li><a href="index.html#contact"
+                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Contact</a>
+                    </li>
+                </ul>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 text-gray-700 p-4 bg-white shadow-lg">
+                <li><a href="index.html#about" class="hover:text-blue-500">About</a></li>
+                <li><a href="index.html#skills" class="hover:text-blue-500">Skills</a></li>
+                <li><a href="index.html#projects" class="hover:text-blue-500">Projects</a></li>
+                <li><a href="index.html#contact" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-28 container mx-auto max-w-5xl px-4">
+
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-gray-900">
+                Hero Apps
+            </h1>
+
+            <p class="text-gray-600 mb-6 max-w-2xl">
+                A centralized platform to discover, manage, and launch productivity apps seamlessly.
+            </p>
+
+            <img src="./assets/images/project2.png" alt="Hero Apps project screenshot"
+                class="w-full h-[360px] object-cover rounded-xl shadow-md border">
+        </section>
+
+        <div class="mb-6">
+
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">Technology Stack</h2>
+
+            <div class="flex flex-wrap gap-3">
+                <span class="badge badge-outline">React</span>
+                <span class="badge badge-outline">React Router</span>
+                <span class="badge badge-outline">Tailwind CSS</span>
+                <span class="badge badge-outline">Daisy UI</span>
+                <span class="badge badge-outline">React Loader Spinner</span>
+                <span class="badge badge-outline">React Icons</span>
+                <span class="badge badge-outline">Local Storage API</span>
+                <span class="badge badge-outline">Recharts</span>
+            </div>
+
+        </div>
+
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">Description</h2>
+
+            <p class="text-gray-700 leading-relaxed">
+                Hero Apps is a modern app-store-style web application where users can explore and browse different apps
+                through a clean and responsive interface.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mt-3">
+                The project focuses on structured layout design, smooth user
+                experience and reusable UI components built with modern CSS utilities.
+            </p>
+
+        </div>
+
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">Live Demo</h2>
+            <a href="https://verdant-stroopwafel-0c1cde.netlify.app" target="_blank" class="btn btn-primary">View
+                Live</a>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">GitHub Repository</h2>
+            <a href="https://github.com/abdulrehmanaarmaan/Assignment-8" target="_blank" class="btn btn-primary">Client
+                Repo</a>
+        </div>
+
+        <div class="mb-6">
+
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">Challenges</h2>
+
+            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
+                <li>Designing responsive grid layout</li>
+                <li>Maintaining consistent UI spacing, card alignment and hover interactions</li>
+            </ul>
+
+        </div>
+
+        <div class="mb-10">
+
+            <h2 class="text-xl font-semibold mb-3 text-gray-900">Future Improvements</h2>
+
+            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
+                <li>Adding user authentication</li>
+                <li>Converting the project into a full-stack application</li>
+            </ul>
+
+        </div>
+    </main>
+
+    <footer class="border-t py-6 text-sm text-gray-500 px-4">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p>© 2026 Abdul Rehman Aarmaan</p>
+            <div class="flex space-x-4 mt-2 md:mt-0">
+                <a class="hover:text-gray-900 transition" target="_blank"
+                    href="https://github.com/abdulrehmanaarmaan">GitHub</a>
+                <a class="hover:text-gray-900 transition" target="_blank"
+                    href="https://www.linkedin.com/in/abdul-rehman-aarmaan">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
