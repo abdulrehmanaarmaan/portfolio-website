@@ -302,10 +302,11 @@
         <p class="text-gray-700 mb-2">Phone/WhatsApp: <a href="https://wa.me/8801337910777"
             class="text-blue-500 hover:underline">+8801725348534</a></p>
 
-        <form class="mt-6 flex flex-col space-y-4 px-4">
-          <input type="text" placeholder="Your Name" class="p-3 border rounded" required>
-          <input type="email" placeholder="Your Email" class="p-3 border rounded" required>
-          <textarea type="text" placeholder="Your Message" class="p-3 border rounded" required></textarea>
+        <form id="contact-form" class="mt-6 flex flex-col space-y-4 px-4">
+          <input name="from_name" type="text" placeholder="Your Name" class="p-3 border rounded" required>
+          <input name="from_email" type="email" placeholder="Your Email" class="p-3 border rounded" required>
+          <textarea name="message" type="text" placeholder="Your Message" class="p-3 border rounded"
+            required></textarea>
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
 
@@ -326,6 +327,7 @@
   </footer>
 
   <script src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </body>
 

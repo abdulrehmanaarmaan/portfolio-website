@@ -17,3 +17,25 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
         mobileMenu.classList.add('hidden');
     });
 });
+
+
+(function () {
+    emailjs.init("EDWcOyk5YgrEkHns7"); // paste public key here
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_5q1pb9o",   // paste service id
+        "template_9ewlj39",  // paste template id
+        this
+    )
+        .then(function () {
+            alert("Message sent successfully!");
+            document.getElementById("contact-form").reset();
+        }, function (error) {
+            alert("Failed to send message. Try again.");
+            console.log(error);
+        });
+});
