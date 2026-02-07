@@ -9,19 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('animate-slide-down'); // optional CSS animation
     });
-})
 
-// Auto-close mobile menu when link clicked
-document.querySelectorAll('#mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+    // Auto-close mobile menu when link clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
     });
-});
-
-
-(function () {
-    emailjs.init("EDWcOyk5YgrEkHns7"); // paste public key here
-})();
+})
 
 document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -34,7 +29,8 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         .then(function () {
             alert("Message sent successfully!");
             document.getElementById("contact-form").reset();
-        }, function (error) {
+        })
+        .catch(function (error) {
             alert("Failed to send message. Try again.");
             console.log(error);
         });
