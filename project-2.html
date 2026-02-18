@@ -1,175 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" class="scroll-smooth">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Apps | Project Details</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
+
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- DaisyUI Plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/daisyui.css" rel="stylesheet" type="text/css" />
+
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Nunito Sans"', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { brand: '#2563eb' }
                 },
             },
-            plugins: [daisyui],
         }
     </script>
 
-    <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="icon" type="./assets/images/profile.jpg" href="./assets/images/profile.jpg" class="object-cover">
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
 
+
+        .project-card {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 2.5rem;
+        }
+
+
+        .tech-pill {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+
+
+    <link rel="icon" type="image/jpg" href="./assets/images/profile.jpg">
 </head>
 
-<body>
 
-    <header>
-        <nav class="bg-white/90 backdrop/blur border-b border-gray-200 fixed w-full z-50 transition-all">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
-                <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-                    <li><a href="index.html#about"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">About</a>
-                    </li>
-                    <li><a href="index.html#skills"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Skills</a>
-                    </li>
-                    <li><a href="index.html#projects"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Projects</a>
-                    </li>
-                    <li><a href="index.html#contact"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Contact</a>
-                    </li>
-                </ul>
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+<body class="bg-[#fafafa] text-slate-900 selection:bg-brand selection:text-white antialiased">
+
+
+    <header class="fixed top-0 w-full glass-nav border-b border-slate-200/60 z-[100]">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                    AR</div>
+                <a href="index.html" class="font-extrabold tracking-tighter text-lg hidden sm:inline-block">Abdul
+                    Rehman</a>
             </div>
-            <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 text-gray-700 p-4 bg-white shadow-lg">
-                <li><a href="index.html#about" class="hover:text-blue-500">About</a></li>
-                <li><a href="index.html#skills" class="hover:text-blue-500">Skills</a></li>
-                <li><a href="index.html#projects" class="hover:text-blue-500">Projects</a></li>
-                <li><a href="index.html#contact" class="hover:text-blue-500">Contact</a></li>
-            </ul>
-        </nav>
+
+
+            <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
+                <a href="index.html#about" class="hover:text-brand transition-colors">About</a>
+                <a href="index.html#skills" class="hover:text-brand transition-colors">Stack</a>
+                <a href="index.html#projects" class="hover:text-brand transition-colors text-brand">Work</a>
+                <a href="index.html#contact" class="hover:text-brand transition-colors">Contact</a>
+            </nav>
+
+
+            <button id="menu-toggle" class="md:hidden p-2 text-slate-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+            <a href="index.html"
+                class="hidden sm:inline-flex btn btn-sm btn-outline rounded-xl px-6 font-bold normal-case">Back Home</a>
+        </div>
+
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-8 space-y-4">
+            <a href="index.html#about"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">About</a>
+            <a href="index.html#skills"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">Skills</a>
+            <a href="index.html#projects" class="block text-sm font-bold uppercase tracking-widest text-brand">Work</a>
+            <a href="index.html#contact"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">Contact</a>
+        </div>
     </header>
 
-    <main class="pt-28 container mx-auto max-w-5xl px-4">
 
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-gray-900">
-                Hero Apps
-            </h1>
+    <main class="pt-32 pb-24 px-6">
+        <div class="container mx-auto max-w-5xl">
 
-            <p class="text-gray-600 mb-6 max-w-2xl">
-                A centralized platform to discover, manage, and launch productivity apps seamlessly.
-            </p>
 
-            <img src="./assets/images/project2.png" alt="Hero Apps project screenshot"
-                class="w-full h-[360px] object-cover rounded-xl shadow-md border">
-        </section>
+            <section class="mb-16">
+                <div
+                    class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-indigo-100">
+                    Product Ecosystem
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tighter">
+                    Hero Apps
+                </h1>
+                <p class="text-slate-500 text-xl md:text-2xl max-w-3xl font-medium leading-relaxed mb-10">
+                    A centralized platform to discover, manage, and launch productivity apps seamlessly through a
+                    modern, curated interface.
+                </p>
 
-        <div class="mb-6">
 
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Technology Stack</h2>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-indigo-600/5 blur-3xl rounded-full"></div>
+                    <img src="./assets/images/project2.png" alt="Hero Apps Screenshot"
+                        class="relative w-full h-[300px] md:h-[500px] object-cover rounded-[3rem] shadow-2xl border border-slate-200 group-hover:scale-[1.01] transition-transform duration-500">
+                </div>
+            </section>
 
-            <div class="flex flex-wrap gap-3">
-                <span class="badge badge-outline">React</span>
-                <span class="badge badge-outline">React Router</span>
-                <span class="badge badge-outline">Tailwind CSS</span>
-                <span class="badge badge-outline">Daisy UI</span>
-                <span class="badge badge-outline">React Loader Spinner</span>
-                <span class="badge badge-outline">React Icons</span>
-                <span class="badge badge-outline">Local Storage API</span>
-                <span class="badge badge-outline">Recharts</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+
+                <div class="md:col-span-2 project-card p-8 md:p-12">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-6">Technology Stack</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">React Router</span>
+                        <span class="tech-pill">Tailwind CSS</span>
+                        <span class="tech-pill">Daisy UI</span>
+                        <span class="tech-pill">React Loader Spinner</span>
+                        <span class="tech-pill">React Icons</span>
+                        <span class="tech-pill">Local Storage API</span>
+                        <span class="tech-pill">Recharts</span>
+                    </div>
+                </div>
+
+
+                <div class="project-card p-8 md:p-12 flex flex-col justify-between gap-6">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400">Availability</h2>
+                    <div class="space-y-3">
+                        <a href="https://verdant-stroopwafel-0c1cde.netlify.app" target="_blank"
+                            class="btn btn-primary w-full rounded-2xl font-bold normal-case shadow-lg shadow-brand/20">View
+                            Live</a>
+                        <a href="https://github.com/abdulrehmanaarmaan/Assignment-8" target="_blank"
+                            class="btn btn-outline border-slate-200 w-full rounded-2xl font-bold normal-case">Source
+                            Code</a>
+                    </div>
+                </div>
             </div>
 
-        </div>
 
-        <div class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="project-card p-8 md:p-12">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-6">Description</h2>
+                    <div class="space-y-4 text-slate-600 font-medium leading-relaxed">
+                        <p>Hero Apps is a modern app-store-style web application where users can explore and browse
+                            different apps through a clean and responsive interface.</p>
+                        <p>The project focuses on structured layout design, smooth user experience and reusable UI
+                            components built with modern CSS utilities.</p>
+                    </div>
+                </div>
 
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Description</h2>
 
-            <p class="text-gray-700 leading-relaxed">
-                Hero Apps is a modern app-store-style web application where users can explore and browse different apps
-                through a clean and responsive interface.
-            </p>
+                <div class="project-card p-8 md:p-12 bg-slate-900 text-white border-none shadow-2xl">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-500 mb-6">Challenges Overcome
+                    </h2>
+                    <ul class="space-y-4 font-medium">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Designing complex responsive grid layouts that adapt to all screen sizes</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Maintaining pixel-perfect UI spacing and consistent hover interactions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Ensuring smooth card alignment during dynamic content rendering</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <p class="text-gray-700 leading-relaxed mt-3">
-                The project focuses on structured layout design, smooth user
-                experience and reusable UI components built with modern CSS utilities.
-            </p>
 
-        </div>
+            <div class="project-card p-8 md:p-12 border-dashed border-2 bg-transparent">
+                <h2 class="text-sm font-black uppercase tracking-widest text-indigo-600 mb-8 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                            d="M17.418 3.623l-4.276 4.276a2 2 0 01-2.828 0L7.49 5.074a2 2 0 010-2.828l.923-.923a.999.999 0 000-1.414L7.438.938a.999.999 0 00-1.414 0L.938 6.024a.999.999 0 000 1.414l.975.975a.999.999 0 001.414 0l.923-.923a2 2 0 012.828 0l2.824 2.824a2 2 0 010 2.828l-4.276 4.276a2 2 0 01-2.828 0l-.923-.923a.999.999 0 00-1.414 0l-.975.975a.999.999 0 000 1.414l5.086 5.086a.999.999 0 001.414 0l.975-.975a.999.999 0 000-1.414l-.923-.923a2 2 0 010-2.828l4.276-4.276a2 2 0 012.828 0l2.824 2.824a2 2 0 010 2.828l-.923.923a.999.999 0 000 1.414l.975.975a.999.999 0 001.414 0l5.086-5.086a.999.999 0 000-1.414l-.975-.975a.999.999 0 00-1.414 0l-.923.923a2 2 0 01-2.828 0l-2.824-2.824a2 2 0 010-2.828l4.276-4.276a2 2 0 012.828 0l.923.923a.999.999 0 001.414 0l.975-.975a.999.999 0 000-1.414l-5.086-5.086a.999.999 0 00-1.414 0z" />
+                    </svg>
+                    Future Roadmap
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-800 mb-2">User Ecosystem</h4>
+                        <p class="text-xs text-slate-500 font-medium">Adding user authentication and personalized
+                            dashboards for tailored app management.</p>
+                    </div>
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-800 mb-2">Full Stack Transition</h4>
+                        <p class="text-xs text-slate-500 font-medium">Converting the current frontend into a robust
+                            full-stack application with real-time data.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Live Demo</h2>
-            <a href="https://verdant-stroopwafel-0c1cde.netlify.app" target="_blank"
-                class="btn btn-primary text-blue-500 hover:text-blue-600">View
-                Live</a>
-        </div>
-
-        <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">GitHub Repository</h2>
-            <a href="https://github.com/abdulrehmanaarmaan/Assignment-8" target="_blank"
-                class="btn btn-primary text-blue-500 hover:text-blue-600">Client
-                Repo</a>
-        </div>
-
-        <div class="mb-6">
-
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Challenges</h2>
-
-            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
-                <li>Designing responsive grid layout</li>
-                <li>Maintaining consistent UI spacing, card alignment and hover interactions</li>
-            </ul>
-
-        </div>
-
-        <div class="mb-10">
-
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Future Improvements</h2>
-
-            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
-                <li>Adding user authentication</li>
-                <li>Converting the project into a full-stack application</li>
-            </ul>
 
         </div>
     </main>
 
-    <footer class="border-t py-6 text-sm text-gray-500 px-4">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p>© 2026 Abdul Rehman Aarmaan</p>
-            <div class="flex space-x-4 mt-2 md:mt-0">
-                <a class="hover:text-gray-900 transition" target="_blank"
-                    href="https://github.com/abdulrehmanaarmaan">GitHub</a>
-                <a class="hover:text-gray-900 transition" target="_blank"
-                    href="https://www.linkedin.com/in/abdul-rehman-aarmaan">LinkedIn</a>
+
+    <footer class="py-12 border-t border-slate-100 px-6 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
+            <p class="text-slate-400 text-sm font-medium">© 2026 Abdul Rehman Aarmaan. All rights reserved.</p>
+            <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                <a href="https://github.com/abdulrehmanaarmaan" target="_blank" class="hover:text-brand">GitHub</a>
+                <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank"
+                    class="hover:text-brand">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
 
+    <script>
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
+
 
 </html>

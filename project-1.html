@@ -1,177 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" class="scroll-smooth">
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AssetVerse | Project Details</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
+
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- DaisyUI Plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/daisyui.css" rel="stylesheet" type="text/css" />
+
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['"Nunito Sans"', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: { brand: '#2563eb' }
                 },
             },
-            plugins: [daisyui],
         }
     </script>
 
-    <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="icon" type="./assets/images/profile.jpg" href="./assets/images/profile.jpg" class="object-cover">
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
 
+
+        .project-card {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 2.5rem;
+        }
+
+
+        .tech-pill {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+
+
+    <link rel="icon" type="image/jpg" href="./assets/images/profile.jpg">
 </head>
 
-<body>
 
-    <header>
-        <nav class="bg-white/90 backdrop/blur border-b border-gray-200 fixed w-full z-50 transition-all">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
-                <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-                    <li><a href="index.html#about"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">About</a>
-                    </li>
-                    <li><a href="index.html#skills"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Skills</a>
-                    </li>
-                    <li><a href="index.html#projects"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Projects</a>
-                    </li>
-                    <li><a href="index.html#contact"
-                            class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Contact</a>
-                    </li>
-                </ul>
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+<body class="bg-[#fafafa] text-slate-900 selection:bg-brand selection:text-white antialiased">
+
+
+    <header class="fixed top-0 w-full glass-nav border-b border-slate-200/60 z-[100]">
+        <div class="container mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                    AR</div>
+                <a href="index.html" class="font-extrabold tracking-tighter text-lg hidden sm:inline-block">Abdul
+                    Rehman</a>
             </div>
-            <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 text-gray-700 p-4 bg-white shadow-lg">
-                <li><a href="index.html#about" class="hover:text-blue-500">About</a></li>
-                <li><a href="index.html#skills" class="hover:text-blue-500">Skills</a></li>
-                <li><a href="index.html#projects" class="hover:text-blue-500">Projects</a></li>
-                <li><a href="index.html#contact" class="hover:text-blue-500">Contact</a></li>
-            </ul>
-        </nav>
+
+
+            <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
+                <a href="index.html#about" class="hover:text-brand transition-colors">About</a>
+                <a href="index.html#skills" class="hover:text-brand transition-colors">Stack</a>
+                <a href="index.html#projects" class="hover:text-brand transition-colors text-brand">Work</a>
+                <a href="index.html#contact" class="hover:text-brand transition-colors">Contact</a>
+            </nav>
+
+
+            <button id="menu-toggle" class="md:hidden p-2 text-slate-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+            <a href="index.html"
+                class="hidden sm:inline-flex btn btn-sm btn-outline rounded-xl px-6 font-bold normal-case">Back Home</a>
+        </div>
+
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-8 space-y-4">
+            <a href="index.html#about"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">About</a>
+            <a href="index.html#skills"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">Skills</a>
+            <a href="index.html#projects" class="block text-sm font-bold uppercase tracking-widest text-brand">Work</a>
+            <a href="index.html#contact"
+                class="block text-sm font-bold uppercase tracking-widest text-slate-600">Contact</a>
+        </div>
     </header>
 
-    <main class="pt-28 container mx-auto max-w-5xl px-4">
 
-        <section class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-3 text-gray-900">
-                AssetVerse
-            </h1>
+    <main class="pt-32 pb-24 px-6">
+        <div class="container mx-auto max-w-5xl">
 
-            <p class="text-gray-600 mb-6 max-w-2xl">
-                A modern asset management web application focused on usability, scalability, and clean UI architecture.
-            </p>
 
-            <img src="./assets/images/project1.png" alt="AssetVerse project screenshot"
-                class="w-full h-[360px] object-cover rounded-xl shadow-md border">
-        </section>
+            <section class="mb-16">
+                <div
+                    class="inline-flex items-center gap-2 bg-blue-50 text-brand px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-blue-100">
+                    Case Study
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 tracking-tighter">
+                    AssetVerse
+                </h1>
+                <p class="text-slate-500 text-xl md:text-2xl max-w-3xl font-medium leading-relaxed mb-10">
+                    A modern asset management web application focused on usability, scalability, and clean UI
+                    architecture.
+                </p>
 
-        <div class="mb-6">
 
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Technology Stack</h2>
+                <div class="relative group">
+                    <div
+                        class="absolute inset-0 bg-brand/5 blur-3xl rounded-full group-hover:bg-brand/10 transition-colors">
+                    </div>
+                    <img src="./assets/images/project1.png" alt="AssetVerse Screenshot"
+                        class="relative w-full h-[300px] md:h-[500px] object-cover rounded-[3rem] shadow-2xl border border-slate-200 group-hover:scale-[1.01] transition-transform duration-500">
+                </div>
+            </section>
 
-            <div class="flex flex-wrap gap-3">
-                <span class="badge badge-outline">React</span>
-                <span class="badge badge-outline">Tailwind CSS</span>
-                <span class="badge badge-outline">TanStack Query</span>
-                <span class="badge badge-outline">Axios</span>
-                <span class="badge badge-outline">Recharts</span>
-                <span class="badge badge-outline">Node.js</span>
-                <span class="badge badge-outline">Express.js</span>
-                <span class="badge badge-outline">MongoDB</span>
-                <span class="badge badge-outline">Firebase</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+
+                <div class="md:col-span-2 project-card p-8 md:p-12">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-6">Technology Stack</h2>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Tailwind CSS</span>
+                        <span class="tech-pill">TanStack Query</span>
+                        <span class="tech-pill">Axios</span>
+                        <span class="tech-pill">Recharts</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express.js</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">Firebase</span>
+                    </div>
+                </div>
+
+
+                <div class="project-card p-8 md:p-12 flex flex-col justify-between gap-6">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400">Project Assets</h2>
+                    <div class="space-y-3">
+                        <a href="https://assignment-11-client-f195a.web.app" target="_blank"
+                            class="btn btn-primary w-full rounded-2xl font-bold normal-case shadow-lg shadow-brand/20">Live
+                            Demo</a>
+                        <a href="https://github.com/abdulrehmanaarmaan/Assignment-11-Client" target="_blank"
+                            class="btn btn-outline border-slate-200 w-full rounded-2xl font-bold normal-case">Client
+                            Repo</a>
+                    </div>
+                </div>
             </div>
 
-        </div>
 
-        <div class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="project-card p-8 md:p-12">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-400 mb-6">Description</h2>
+                    <div class="space-y-4 text-slate-600 font-medium leading-relaxed">
+                        <p>AssetVerse is a web-based asset management system designed to help users efficiently track,
+                            organize and manage digital and physical assets.</p>
+                        <p>The application focuses on a clean, intuitive user interface and smooth user experience,
+                            allowing users to view asset information, perform basic management actions and navigate data
+                            easily.</p>
+                    </div>
+                </div>
 
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Description</h2>
 
-            <p class="text-gray-700 leading-relaxed">
-                AssetVerse is a web-based asset management system designed to help users efficiently track, organize
-                and manage digital and physical assets.
-            </p>
+                <div class="project-card p-8 md:p-12 bg-slate-900 text-white border-none shadow-2xl">
+                    <h2 class="text-sm font-black uppercase tracking-widest text-slate-500 mb-6">The Challenge</h2>
+                    <ul class="space-y-4 font-medium">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Maintaining visual consistency across breakpoints</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Structuring reusable UI components efficiently</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1.5 h-1.5 bg-brand rounded-full mt-2.5 shrink-0"></span>
+                            <span>Balancing aesthetics with performance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-            <p class="text-gray-700 leading-relaxed mt-3">
-                The application focuses on a clean, intuitive user interface and smooth user experience, allowing users
-                to view asset information, perform basic management actions and navigate data easily.
-            </p>
 
-        </div>
+            <div class="project-card p-8 md:p-12 border-dashed border-2 bg-transparent">
+                <h2 class="text-sm font-black uppercase tracking-widest text-brand mb-8 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.334-.398-1.817a1 1 0 00-1.514-.857 4.028 4.028 0 00-1.888 5.156c.129.355.273.705.432 1.05a7.012 7.012 0 002.893 3.39c.584.35 1.014.774 1.285 1.227.36.603.47 1.296.376 2.031a1 1 0 001.232 1.084 9.018 9.018 0 006.011-5.076 3.559 3.559 0 00.321-1.496c.005-.453-.005-.946-.076-1.452a8.856 8.856 0 00-1.728-4.918c-.403-.546-.832-1.046-1.224-1.462a6.207 6.207 0 00-1.096-1.003zM11 11a1 1 0 00-1 1v1.143c0 .907-.101 1.788-.292 2.642a3.001 3.001 0 01-1.667-5.567A1 1 0 0110 10h1v1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Future Improvements
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold text-slate-700 text-sm">
+                        Dark mode support</div>
+                    <div
+                        class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold text-slate-700 text-sm">
+                        AI-driven asset insights</div>
+                    <div
+                        class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm font-bold text-slate-700 text-sm">
+                        Social sharing & collaboration</div>
+                </div>
+            </div>
 
-        <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Live Demo</h2>
-            <a href="https://assignment-11-client-f195a.web.app" target="_blank"
-                class="btn btn-primary text-blue-500 hover:text-blue-600">View
-                Live</a>
-        </div>
-
-        <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">GitHub Repository</h2>
-            <a href="https://github.com/abdulrehmanaarmaan/Assignment-11-Client" target="_blank"
-                class="btn btn-outline text-blue-500 hover:text-blue-600">Client Repo</a>
-        </div>
-
-        <div class="mb-6">
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Challenges</h2>
-
-            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
-                <li>Maintaining visual consistency across breakpoints</li>
-                <li>Structuring reusable UI components efficiently</li>
-                <li>Balancing aesthetics with performance</li>
-            </ul>
-
-        </div>
-
-        <div class="mb-10">
-
-            <h2 class="text-xl font-semibold mb-3 text-gray-900">Future Improvements</h2>
-
-            <ul class="list-disc list-outside text-gray-700 space-y-2 pl-5 leading-relaxed">
-                <li>Dark mode support</li>
-                <li>AI-driven asset insights</li>
-                <li>Social sharing and collaboration features</li>
-            </ul>
 
         </div>
     </main>
 
-    <footer class="border-t py-6 text-sm text-gray-500 px-4">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p>© 2026 Abdul Rehman Aarmaan</p>
 
-            <div class="flex space-x-4 mt-2 md:mt-0">
-                <a class="hover:text-gray-900 transition" target="_blank"
-                    href="https://github.com/abdulrehmanaarmaan">GitHub</a>
-                <a class="hover:text-gray-900 transition" target="_blank"
-                    href="https://www.linkedin.com/in/abdul-rehman-aarmaan">LinkedIn</a>
+    <footer class="py-12 border-t border-slate-100 px-6 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
+            <p class="text-slate-400 text-sm font-medium">© 2026 Abdul Rehman Aarmaan. All rights reserved.</p>
+            <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                <a href="https://github.com/abdulrehmanaarmaan" target="_blank" class="hover:text-brand">GitHub</a>
+                <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank"
+                    class="hover:text-brand">LinkedIn</a>
             </div>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
 
+    <script>
+        // Mobile Menu Logic
+        const btn = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
 
 </html>

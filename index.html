@@ -1,344 +1,295 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" class="scroll-smooth">
+
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Rehman Aarmaan | Full Stack Developer (MERN)</title>
+  <title>Abdul Rehman Aarmaan | MERN Stack Engineer</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/daisyui.css" rel="stylesheet" type="text/css" />
 
-  <!-- DaisyUI Plugin -->
-  <script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Nunito Sans"', 'sans-serif'],
-          },
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { brand: '#2563eb' }
         },
       },
-      plugins: [daisyui],
     }
   </script>
 
-  <link rel="stylesheet" href="./css/style.css">
 
-  <link rel="icon" type="./assets/images/profile.jpg" href="./assets/images/profile.jpg" class="object-cover">
+  <style>
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: saturate(180%) blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+    }
 
+
+    .bento-card {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+
+    .bento-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+      border-color: #2563eb;
+    }
+
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.75rem;
+        line-height: 1.1;
+      }
+    }
+  </style>
+
+
+  <link rel="icon" type="image/jpg" href="./assets/images/profile.jpg">
 </head>
 
-<body>
 
-  <header class="">
-    <nav class="bg-white/90 backdrop/blur border-b border-gray-200 fixed w-full z-50 transition-all">
-      <div class="container mx-auto flex justify-between items-center p-4">
-        <a href="index.html" class="text-xl font-bold text-gray-800">Abdul Rehman</a>
+<body class="bg-[#fafafa] text-slate-900 selection:bg-brand selection:text-white antialiased">
 
-        <!-- Desktop Links -->
-        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
-          <li><a href="#about"
-              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">About</a>
-          </li>
-          <li><a href="#skills"
-              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Skills</a>
-          </li>
-          <li><a href="#projects"
-              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Projects</a>
-          </li>
-          <li><a href="#contact"
-              class="relative hover:text-blue-600 transition after:absolute after:left-0 after:-bottom-1 after-[h-2px] after:w-0 after:bg-blue-600 hover:after:w-full after:transition-all">Contact</a>
-          </li>
-        </ul>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-gray-700 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+  <header class="fixed top-0 w-full glass-nav border-b border-slate-200/60 z-[100]">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">AR
         </div>
+        <span class="font-extrabold tracking-tighter text-lg hidden sm:inline-block">Abdul Rehman</span>
       </div>
 
-      <!-- Mobile Links -->
-      <ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 text-gray-700 p-4 bg-white shadow-lg">
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
-    </nav>
 
-  </header>
+      <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
+        <a href="#about" class="hover:text-brand transition-colors">About</a>
+        <a href="#skills" class="hover:text-brand transition-colors">Stack</a>
+        <a href="#projects" class="hover:text-brand transition-colors">Work</a>
+        <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+      </nav>
 
-  <main>
-    <section id="hero"
-      class="md:min-h-screen flex flex-col justify-center items-center text-center bg-gray-50 bg-gradient-to-r from-blue-50 via-white to-green-50 py-20 px-4">
 
-      <!-- Profile Image -->
-      <img src="./assets/images/profile.jpg" alt="Abdul Rehman Aarmaan - MERN Stack Developer" loading="lazy"
-        class="w-40 h-40 rounded-full shadow-lg mb-6 object-cover border-4 border-white">
+      <button id="menu-toggle" class="md:hidden p-2 text-slate-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-      <!-- Name -->
-      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-2">
-        Hi, I'm Abdul Rehman Aarmaan
-      </h1>
 
-      <!-- Availability Badge -->
-      <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4 inline-block">
-        🚀 Available for Remote Opportunities
-      </span>
-
-      <!-- Role -->
-      <p class="text-xl md:text-2xl text-gray-600 mb-2">
-        MERN Stack Developer
-      </p>
-
-      <!-- Strong Tagline -->
-      <p class="text-gray-500 max-w-xl mx-auto mb-6">
-        I build responsive, scalable and user-focused web applications using modern JavaScript technologies.
-        Passionate about clean code, performance and real-world problem solving.
-      </p>
-
-      <!-- Buttons -->
-      <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-
-        <!-- Resume (Primary) -->
-        <a href="https://drive.google.com/file/d/1sGj80HpLvV6sKPTealM8VnibnuCbLu9H/view?usp=sharing" target="_blank"
-          class="btn btn-primary hover:scale-105 transition-transform shadow-md hover:shadow-xl px-1 rounded">
-          View Resume
-        </a>
-
-        <!-- GitHub -->
-        <a href="https://github.com/abdulrehmanaarmaan" target="_blank" rel="noopener noreferrer"
-          class="btn btn-outline hover:scale-105 transition-transform shadow-md px-1 rounded">
-          GitHub
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank" rel="noopener noreferrer"
-          class="btn btn-outline hover:scale-105 transition-transform shadow-md px-1 rounded">
-          LinkedIn
-        </a>
-
-        <!-- Best Project -->
-        <a href="https://assignment-11-client-f195a.web.app" target="_blank" rel="noopener noreferrer"
-          class="btn btn-accent hover:scale-105 transition-transform shadow-md px-1 rounded">
-          Best Project
-        </a>
-
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="mt-12 text-gray-400 animate-bounce text-sm">
-        ↓ Scroll Down
-      </div>
-
-    </section>
-
-    <section id="about" class="md:py-20 py-16 bg-white">
-      <div class="container mx-auto max-w-3xl text-center px-4">
-        <h2 class="text-3xl font-bold mb-6">About Me</h2>
-        <p class="text-gray-700 mb-4">
-          I am a passionate full stack developer with hands-on experience building responsive web applications using
-          modern technologies. I began my programming journey around ten months ago and enjoy turning ideas into clean,
-          functional and visually appealing products.
-        </p>
-        <p class="text-gray-700 mb-4">
-          Outside of coding, I enjoy sports and learning new technologies and I’m always motivated to grow through
-          hands-on projects.
-        </p>
-      </div>
-    </section>
-
-    <div id='skills' class="md:py-20 py-16 bg-gray-50">
-      <div class="container mx-auto max-w-5xl text-center">
-        <h2 class="text-3xl font-bold mb-6">Tech Stack</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-          <!-- Frontend -->
-          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
-            <h3 class="font-bold mb-2 text-lg">Frontend</h3>
-
-            <div class="grid grid-cols-3 justify-between gap-y-5">
-              <div>
-                <img src="https://skillicons.dev/icons?i=html" class="mx-auto" />
-                <span>HTML</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=css" class="mx-auto" />
-                <span>CSS</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=js" class="mx-auto" />
-                <span>JavaScript</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=tailwind" class="mx-auto" />
-                <span>Tailwind</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=react" class="mx-auto" />
-                <span>React</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=nextjs" class="mx-auto" />
-                <span>Next</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
-            <h3 class="font-bold mb-2 text-lg">Backend</h3>
-
-            <div class="grid grid-cols-3 justify-between gap-y-5">
-              <div>
-                <img src="https://skillicons.dev/icons?i=nodejs" class="mx-auto" />
-                <span>Node</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=express" class="mx-auto" />
-                <span>Express</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=mongodb" class="mx-auto" />
-                <span>MongoDB</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=firebase" class="mx-auto" />
-                <span>Firebase</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="p-6 bg-white rounded shadow hover:shadow-2xl hover:scale-105 transition-transform duration-300">
-            <h3 class="font-bold mb-2 text-lg">Tools</h3>
-
-            <div class="grid grid-cols-3 justify-between">
-              <div>
-                <img src="https://skillicons.dev/icons?i=git" class="mx-auto" />
-                <span>Git</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=github" class="mx-auto" />
-                <span>GitHub</span>
-              </div>
-              <div>
-                <img src="https://skillicons.dev/icons?i=vscode" class="mx-auto" />
-                <span>VSCode</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="mailto:abdulrehmanaarmaan@gmail.com"
+        class="hidden sm:inline-flex btn btn-sm btn-primary rounded-xl px-6 font-bold normal-case">Contact Me</a>
     </div>
 
-    <section id="projects" class="md:py-20 py-16 bg-white">
-      <div class="container mx-auto max-w-5xl">
-        <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <!-- Project 1 -->
-          <div
-            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
-            <img src="./assets/images/project1.png" alt="Project 1" class="w-full h-48 object-cover">
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
-              <h3 class="font-bold mb-2 text-lg">AssetVerse</h3>
-              <p class="text-sm mb-4 text-center">
-                An interactive platform for managing environmental assets.
-              </p>
-              <a href="project-1.html" class="btn btn-primary hover:text-blue-300">View Details</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-8 space-y-4">
+      <a href="#about" class="block text-sm font-bold uppercase tracking-widest text-slate-600">About</a>
+      <a href="#skills" class="block text-sm font-bold uppercase tracking-widest text-slate-600">Skills</a>
+      <a href="#projects" class="block text-sm font-bold uppercase tracking-widest text-slate-600">Work</a>
+      <a href="#contact" class="block text-sm font-bold uppercase tracking-widest text-slate-600">Contact</a>
+    </div>
+  </header>
+
+
+  <main>
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+      <div class="relative w-32 h-32 md:w-44 md:h-44 mb-8">
+        <div class="absolute inset-0 bg-brand/20 blur-3xl rounded-full"></div>
+        <img src="./assets/images/profile.jpg" alt="Abdul Rehman"
+          class="relative w-full h-full rounded-[2.5rem] object-cover border-4 border-white shadow-2xl">
+      </div>
+
+
+      <div
+        class="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-green-100">
+        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+        Available for Remote Engineering
+      </div>
+
+
+      <h1 class="hero-title text-5xl md:text-8xl font-extrabold text-slate-900 mb-6 tracking-tighter max-w-5xl">
+        Hi, I'm <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Abdul
+          Rehman</span>
+      </h1>
+
+
+      <p class="text-slate-500 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
+        Full Stack MERN Developer building scalable, user-focused web applications with modern JavaScript technologies.
+      </p>
+
+
+      <div class="flex flex-wrap justify-center gap-4 w-full sm:w-auto">
+        <a href="https://drive.google.com/file/d/1sGj80HpLvV6sKPTealM8VnibnuCbLu9H/view" target="_blank"
+          class="btn btn-lg btn-primary rounded-2xl px-10 font-bold shadow-xl w-[90%] sm:w-auto">View Resume</a>
+        <a href="https://github.com/abdulrehmanaarmaan" target="_blank"
+          class="btn btn-lg btn-outline border-slate-200 rounded-2xl px-10 font-bold w-[90%] sm:w-auto">GitHub</a>
+      </div>
+    </section>
+
+
+    <section id="about" class="py-24 bg-white px-6">
+      <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center md:text-left">About Me</h2>
+        <div class="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed">
+          <p>I am a passionate full stack developer with hands-on experience building responsive web applications using
+            modern technologies. I began my programming journey around ten months ago and enjoy turning ideas into
+            clean, functional and visually appealing products.</p>
+          <p>Outside of coding, I enjoy sports and learning new technologies and I’m always motivated to grow through
+            hands-on projects.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="skills" class="py-24 bg-slate-50 px-6">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">Technical Matrix</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bento-card p-10 rounded-[2.5rem] text-center">
+            <h3 class="font-bold text-xl mb-8">Frontend</h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img src="https://skillicons.dev/icons?i=html,css,js,tailwind,react,nextjs"
+                class="h-10 col-span-3 mx-auto" />
             </div>
           </div>
-
-          <!-- Project 2 -->
-          <div
-            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
-            <img src="./assets/images/project2.png" alt="Project 2" class="w-full h-48 object-cover">
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
-              <h3 class="font-bold mb-2 text-lg">Hero Apps</h3>
-              <p class="text-sm mb-4 text-center">
-                A web-based app store platform that allows users to browse, explore, and interact with a variety of
-                applications in a modern, responsive interface.
-              </p>
-              <a href="project-2.html" class="btn btn-primary hover:text-blue-300">View Details</a>
+          <div class="bento-card p-10 rounded-[2.5rem] text-center">
+            <h3 class="font-bold text-xl mb-8">Backend</h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase"
+                class="h-10 col-span-3 mx-auto" />
             </div>
           </div>
-
-          <!-- Project 3 -->
-          <div
-            class="relative card bg-gray-50 rounded overflow-hidden hover:scale-105 transition-transform shadow-lg hover:shadow-2xl">
-            <img src="./assets/images/project3.png" alt="Project 3" class="w-full h-48 object-cover">
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity p-4 flex flex-col justify-center items-center text-white">
-              <h3 class="font-bold mb-2 text-lg">Green Earth</h3>
-              <p class="text-sm mb-4 text-center">
-                An eco-focused platform promoting sustainable practices and
-                environmental awareness through interactive features.
-              </p>
-              <a href="project-3.html" class="btn btn-primary hover:text-blue-300">View Details</a>
+          <div class="bento-card p-10 rounded-[2.5rem] text-center">
+            <h3 class="font-bold text-xl mb-8">Tools</h3>
+            <div class="grid grid-cols-3 gap-4">
+              <img src="https://skillicons.dev/icons?i=git,github,vscode" class="h-10 col-span-3 mx-auto" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-20 bg-gray-50">
-      <div class="container mx-auto max-w-3xl text-center">
-        <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
 
-        <p class="text-gray-700 mb-2">Email: <a href="mailto:abdulrehmanaarmaan@gmail.com"
-            class="text-blue-500 hover:underline">abdulrehmanaarmaan@gmail.com</a></p>
-        <p class="text-gray-700 mb-2">Phone/WhatsApp: <a href="https://wa.me/8801337910777"
-            class="text-blue-500 hover:underline">+8801725348534</a></p>
+    <section id="projects" class="py-24 bg-white px-6">
+      <div class="container mx-auto max-w-6xl">
+        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">Selected Engineering</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="group bento-card rounded-[2.5rem] overflow-hidden flex flex-col">
+            <div class="h-56 bg-slate-100 overflow-hidden relative">
+              <img src="./assets/images/project1.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-8">
+              <h3 class="font-extrabold text-2xl mb-4">AssetVerse</h3>
+              <p class="text-slate-500 mb-6 text-sm">Interactive platform for managing environmental assets with MERN
+                stack.</p>
+              <a href="project-1.html"
+                class="inline-flex items-center font-bold text-brand hover:gap-2 transition-all">Case Study <svg
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="group bento-card rounded-[2.5rem] overflow-hidden flex flex-col">
+            <div class="h-56 bg-slate-100 overflow-hidden relative">
+              <img src="./assets/images/project2.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-8">
+              <h3 class="font-extrabold text-2xl mb-4">Hero Apps</h3>
+              <p class="text-slate-500 mb-6 text-sm">A web-based app store marketplace with modern responsive interface.
+              </p>
+              <a href="project-2.html"
+                class="inline-flex items-center font-bold text-brand hover:gap-2 transition-all">Case Study <svg
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="group bento-card rounded-[2.5rem] overflow-hidden flex flex-col">
+            <div class="h-56 bg-slate-100 overflow-hidden relative">
+              <img src="./assets/images/project3.png"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+            </div>
+            <div class="p-8">
+              <h3 class="font-extrabold text-2xl mb-4">Green Earth</h3>
+              <p class="text-slate-500 mb-6 text-sm">Eco-focused platform promoting sustainable practices via
+                interactive UI.</p>
+              <a href="project-3.html"
+                class="inline-flex items-center font-bold text-brand hover:gap-2 transition-all">Case Study <svg
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <form id="contact-form" class="mt-6 flex flex-col space-y-4 px-4">
-          <input name="from_name" type="text" placeholder="Your Name" class="p-3 border rounded" required>
-          <input name="from_email" type="email" placeholder="Your Email" class="p-3 border rounded" required>
-          <textarea name="message" type="text" placeholder="Your Message" class="p-3 border rounded"
+
+    <section id="contact" class="py-24 px-6">
+      <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-10 tracking-tighter">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <a href="mailto:abdulrehmanaarmaan@gmail.com" class="p-8 bento-card rounded-3xl flex flex-col items-center">
+            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Email</span>
+            <span class="font-bold text-brand break-all">abdulrehmanaarmaan@gmail.com</span>
+          </a>
+          <a href="https://wa.me/8801725348534" class="p-8 bento-card rounded-3xl flex flex-col items-center">
+            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">WhatsApp</span>
+            <span class="font-bold text-brand">+8801725348534</span>
+          </a>
+        </div>
+        <form id="contact-form" class="space-y-4 max-w-xl mx-auto">
+          <input name="from_name" type="text" placeholder="Your Name"
+            class="w-full p-5 rounded-2xl border border-slate-200 focus:border-brand focus:outline-none bg-white"
+            required>
+          <input name="from_email" type="email" placeholder="Your Email"
+            class="w-full p-5 rounded-2xl border border-slate-200 focus:border-brand focus:outline-none bg-white"
+            required>
+          <textarea name="message" placeholder="Message"
+            class="w-full p-5 rounded-2xl border border-slate-200 focus:border-brand focus:outline-none bg-white h-32"
             required></textarea>
-          <button type="submit" class="btn btn-primary w-fit mx-auto hover:text-blue-600">Send Message</button>
+          <button type="submit" class="btn btn-lg btn-primary w-full rounded-2xl font-bold shadow-xl">Send
+            Message</button>
         </form>
-
       </div>
     </section>
   </main>
 
-  <footer class="border-t py-6 text-sm text-gray-500 px-4">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <p>© 2026 Abdul Rehman Aarmaan</p>
-      <div class="flex space-x-4 mt-2 md:mt-0">
-        <a class="hover:text-gray-900 transition" target="_blank"
-          href="https://github.com/abdulrehmanaarmaan">GitHub</a>
-        <a class="hover:text-gray-900 transition" target="_blank"
-          href="https://www.linkedin.com/in/abdul-rehman-aarmaan">LinkedIn</a>
+
+  <footer class="py-12 border-t border-slate-100 px-6 bg-white">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
+      <p class="text-slate-400 text-sm font-medium">© 2026 Abdul Rehman Aarmaan. All rights reserved.</p>
+      <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
+        <a href="https://github.com/abdulrehmanaarmaan" target="_blank" class="hover:text-brand">GitHub</a>
+        <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank" class="hover:text-brand">LinkedIn</a>
       </div>
     </div>
   </footer>
 
   <script src="./js/script.js"></script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
 
-  <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "EDWcOyk5YgrEkHns7",
-        });
-      })();
-  </script>
-
+  <script type="text/javascript"> (function () { emailjs.init({ publicKey: "EDWcOyk5YgrEkHns7", }); })(); </script>
 </body>
 
 </html>
