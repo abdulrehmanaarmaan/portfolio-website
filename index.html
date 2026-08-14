@@ -78,6 +78,7 @@
 
       <nav class="hidden md:flex gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
         <a href="#about" class="hover:text-brand transition-colors">About</a>
+        <a href="#experience" class="hover:text-brand transition-colors">Experience</a>
         <a href="#skills" class="hover:text-brand transition-colors">Stack</a>
         <a href="#projects" class="hover:text-brand transition-colors">Work</a>
         <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
@@ -99,6 +100,8 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-8 space-y-4">
       <a href="#about"
         class="block text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-brand transition-colors">About</a>
+      <a href="#experience"
+        class="block text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-brand transition-colors">Experience</a>
       <a href="#skills"
         class="block text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-brand transition-colors">Skills</a>
       <a href="#projects"
@@ -110,18 +113,17 @@
 
 
   <main>
-    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 pb-10">
       <div class="relative w-32 h-32 md:w-44 md:h-44 mb-8">
         <div class="absolute inset-0 bg-brand/20 blur-3xl rounded-full"></div>
         <img src="./assets/images/profile.png" alt="Abdul Rehman"
           class="relative w-full h-full rounded-[2.5rem] object-cover border-4 border-white shadow-2xl">
       </div>
 
-
       <div
         class="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 border border-green-100">
         <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-        Available for Remote Engineering
+        OPEN TO REMOTE OPPORTUNITIES
       </div>
 
 
@@ -132,7 +134,8 @@
 
 
       <p class="text-slate-500 text-lg md:text-2xl max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
-        Full Stack MERN Developer building scalable, user-focused web applications with modern JavaScript technologies.
+        Full Stack MERN Developer building responsive, user-focused web applications with modern JavaScript
+        technologies.
       </p>
 
 
@@ -149,40 +152,178 @@
       <div class="container mx-auto max-w-4xl">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-10 text-center md:text-left">About Me</h2>
         <div class="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed">
-          <p>I am a passionate full stack developer with hands-on experience building responsive web applications using
-            modern technologies. I began my programming journey around ten months ago and enjoy turning ideas into
-            clean, functional and visually appealing products.</p>
+          <p>I am a full stack developer with hands-on experience building responsive web applications using modern
+            JavaScript technologies. I enjoy turning ideas into clean, functional and user-focused products while
+            continuously improving my engineering skills through hands-on development.</p>
           <p>Outside of coding, I enjoy sports and learning new technologies and I’m always motivated to grow through
             hands-on projects.</p>
         </div>
       </div>
     </section>
 
+    <section id="experience" class="py-24 bg-slate-50 px-6">
+      <div class="container mx-auto max-w-6xl">
+
+        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">
+          Experience
+        </h2>
+
+        <article class="bento-card rounded-[2.5rem] p-8 md:p-10">
+
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
+            <div>
+              <h3 class="text-xl md:text-2xl font-extrabold text-slate-900">
+                Full-Stack Developer Intern
+              </h3>
+
+              <p class="mt-2 text-brand font-bold">
+                Fluxypy
+                <span class="text-slate-400 font-medium"> · Remote</span>
+              </p>
+            </div>
+
+            <p class="text-sm font-semibold text-slate-500 md:text-right whitespace-nowrap">
+              Apr 2026 – Jul 2026
+            </p>
+          </div>
+
+          <ul class="space-y-4 text-slate-600 text-sm md:text-base leading-relaxed">
+            <li class="flex gap-3">
+              <span class="text-brand font-bold mt-1">•</span>
+              <span>
+                Developed and maintained web application features using Next.js, React, and TypeScript.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="text-brand font-bold mt-1">•</span>
+              <span>
+                Built responsive, reusable UI components and integrated Firebase for application data management and
+                frontend functionality.
+              </span>
+            </li>
+
+            <li class="flex gap-3">
+              <span class="text-brand font-bold mt-1">•</span>
+              <span>
+                Collaborated with the development team to implement features, resolve issues, and improve application
+                functionality.
+              </span>
+            </li>
+          </ul>
+
+        </article>
+      </div>
+    </section>
 
     <section id="skills" class="py-24 bg-slate-50 px-6">
       <div class="container mx-auto max-w-6xl">
-        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">Technical Matrix</h2>
+
+        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">
+          Technical Stack
+        </h2>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bento-card p-10 rounded-[2.5rem] text-center">
-            <h3 class="font-bold text-xl mb-8">Frontend</h3>
-            <div class="grid grid-cols-3 gap-4">
+
+          <!-- Frontend -->
+          <article class="bento-card p-8 md:p-10 rounded-[2.5rem]">
+            <div class="flex items-center justify-between gap-4 mb-8">
+              <h3 class="font-bold text-xl">Frontend</h3>
+
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-brand bg-blue-50 px-3 py-1.5 rounded-full">
+                UI
+              </span>
+            </div>
+
+            <div class="flex justify-center mb-8">
               <img src="https://skillicons.dev/icons?i=html,css,js,tailwind,react,nextjs"
-                class="h-10 col-span-3 mx-auto" />
+                alt="HTML, CSS, JavaScript, Tailwind CSS, React, and Next.js" class="h-10 max-w-full object-contain">
             </div>
-          </div>
-          <div class="bento-card p-10 rounded-[2.5rem] text-center">
-            <h3 class="font-bold text-xl mb-8">Backend</h3>
-            <div class="grid grid-cols-3 gap-4">
+
+            <ul class="flex flex-wrap gap-2">
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                HTML
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                CSS
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                JavaScript
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Tailwind CSS
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                React
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Next.js
+              </li>
+            </ul>
+          </article>
+
+          <!-- Backend -->
+          <article class="bento-card p-8 md:p-10 rounded-[2.5rem]">
+            <div class="flex items-center justify-between gap-4 mb-8">
+              <h3 class="font-bold text-xl">Backend</h3>
+
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-brand bg-blue-50 px-3 py-1.5 rounded-full">
+                Server
+              </span>
+            </div>
+
+            <div class="flex justify-center mb-8">
               <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase"
-                class="h-10 col-span-3 mx-auto" />
+                alt="Node.js, Express.js, MongoDB, and Firebase" class="h-10 max-w-full object-contain">
             </div>
-          </div>
-          <div class="bento-card p-10 rounded-[2.5rem] text-center">
-            <h3 class="font-bold text-xl mb-8">Tools</h3>
-            <div class="grid grid-cols-3 gap-4">
-              <img src="https://skillicons.dev/icons?i=git,github,vscode" class="h-10 col-span-3 mx-auto" />
+
+            <ul class="flex flex-wrap gap-2">
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Node.js
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Express.js
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                MongoDB
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Firebase
+              </li>
+            </ul>
+          </article>
+
+          <!-- Tools -->
+          <article class="bento-card p-8 md:p-10 rounded-[2.5rem]">
+            <div class="flex items-center justify-between gap-4 mb-8">
+              <h3 class="font-bold text-xl">Tools</h3>
+
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-brand bg-blue-50 px-3 py-1.5 rounded-full">
+                Workflow
+              </span>
             </div>
-          </div>
+
+            <div class="flex justify-center mb-8">
+              <img src="https://skillicons.dev/icons?i=git,github,vscode" alt="Git, GitHub, and Visual Studio Code"
+                class="h-10 max-w-full object-contain">
+            </div>
+
+            <ul class="flex flex-wrap gap-2">
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                Git
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                GitHub
+              </li>
+              <li class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 text-xs font-semibold">
+                VS Code
+              </li>
+            </ul>
+          </article>
+
         </div>
       </div>
     </section>
@@ -190,7 +331,7 @@
 
     <section id="projects" class="py-24 bg-white px-6">
       <div class="container mx-auto max-w-6xl">
-        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">Selected Engineering</h2>
+        <h2 class="text-center text-3xl md:text-4xl font-extrabold mb-16 tracking-tight">Featured Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="group bento-card rounded-[2.5rem] overflow-hidden flex flex-col">
             <div class="h-56 bg-slate-100 overflow-hidden relative">
@@ -199,8 +340,7 @@
             </div>
             <div class="p-8">
               <h3 class="font-extrabold text-2xl mb-4">AssetVerse</h3>
-              <p class="text-slate-500 mb-6 text-sm">Interactive platform for managing environmental assets with MERN
-                stack.</p>
+              <p class="text-slate-500 mb-6 text-sm">Full-stack asset management platform for organizations with employee requests, approvals, and returns.</p>
               <a href="project-1.html"
                 class="inline-flex items-center font-bold text-brand hover:gap-2 transition-all">Case Study <svg
                   xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
