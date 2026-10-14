@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servexa | Project Details</title>
+    <meta name="description"
+        content="Servexa is a full-stack field service management platform built with Next.js, TypeScript, Express.js, PostgreSQL, Prisma, and bKash.">
+    <meta name="theme-color" content="#fafafa">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.1/daisyui.css" rel="stylesheet" type="text/css">
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }, colors: { brand: '#2563eb' } } } }</script>
+    <style>
+        html {
+            scroll-padding-top: 100px
+        }
+
+        body {
+            overflow-x: hidden;
+            font-family: "Plus Jakarta Sans", sans-serif
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, .78);
+            backdrop-filter: saturate(180%) blur(18px);
+            -webkit-backdrop-filter: saturate(180%) blur(18px)
+        }
+
+        .hero-bg {
+            background-image: radial-gradient(60rem 28rem at 15% -10%, rgba(37, 99, 235, .14), transparent 60%), radial-gradient(40rem 24rem at 95% 10%, rgba(99, 102, 241, .14), transparent 60%), linear-gradient(rgba(15, 23, 42, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, .045) 1px, transparent 1px);
+            background-size: auto, auto, 44px 44px, 44px 44px;
+            -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+            mask-image: linear-gradient(to bottom, #000 60%, transparent)
+        }
+
+        .pill {
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            padding: .4rem .8rem;
+            border-radius: .6rem;
+            font-size: .75rem;
+            font-weight: 600;
+            color: #475569;
+            overflow-wrap: anywhere
+        }
+
+        .dot {
+            width: .4rem;
+            height: .4rem;
+            background: #2563eb;
+            border-radius: 9999px;
+            margin-top: .6rem;
+            flex-shrink: 0
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #2563eb;
+            outline-offset: 3px
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important
+            }
+        }
+    </style>
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+</head>
+
+<body class="bg-[#fafafa] text-slate-900 antialiased">
+    <header class="fixed inset-x-0 top-3 z-[100] px-3 sm:px-6">
+        <div class="mx-auto max-w-4xl">
+            <div
+                class="glass flex items-center justify-between gap-3 rounded-full border border-slate-200/70 py-2 pl-3 pr-2 shadow-[0_8px_30px_-12px_rgba(15,23,42,.18)]">
+                <a href="index.html" class="flex items-center gap-2" aria-label="Abdul Rehman, home">
+                    <span
+                        class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 text-sm font-bold text-white">AR</span>
+                    <span class="hidden text-lg font-extrabold tracking-tighter sm:inline-block">Abdul Rehman</span></a>
+                <a href="index.html#projects"
+                    class="rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-bold text-slate-800 transition hover:border-brand/50 hover:text-brand">Back
+                    to Projects</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative px-5 pb-20 pt-28 sm:px-6 sm:pt-36">
+        <div class="hero-bg pointer-events-none absolute inset-x-0 top-0 h-[34rem]" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-4xl space-y-6 md:space-y-8">
+
+            <section>
+                <h1
+                    class="mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-5xl font-extrabold leading-[1.05] tracking-tighter text-transparent sm:text-6xl md:text-7xl">
+                    Servexa</h1>
+                <div
+                    class="rounded-[2.25rem] border border-slate-200/80 bg-white p-2 shadow-[0_24px_48px_-16px_rgba(15,23,42,.18)]">
+                    <img src="./assets/images/servexa.png" alt="Servexa application screenshot" width="1440"
+                        height="900" fetchpriority="high"
+                        class="h-[240px] w-full rounded-[1.75rem] object-cover object-top sm:h-[340px] md:h-[440px]">
+                </div>
+            </section>
+
+            <section
+                class="rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] transition duration-300 hover:border-brand/40 hover:shadow-[0_24px_48px_-16px_rgba(37,99,235,.18)] p-6 sm:p-8 md:p-10"
+                aria-labelledby="links">
+                <h2 id="links" class="mb-4 text-xl font-extrabold tracking-tight">Project Links</h2>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                    <a href="https://servexa-frontend.vercel.app" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex min-h-12 items-center justify-center rounded-2xl px-8 text-sm font-bold transition duration-200 w-full sm:w-auto bg-brand text-white shadow-xl shadow-brand/25 hover:bg-blue-700">Live
+                        Project</a>
+                    <a href="https://github.com/abdulrehmanaarmaan/servexa-frontend" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex min-h-12 items-center justify-center rounded-2xl px-8 text-sm font-bold transition duration-200 w-full sm:w-auto border border-slate-200 bg-white text-slate-800 hover:border-brand/50 hover:text-brand">GitHub
+                        Repository (Client)</a>
+                </div>
+            </section>
+
+            <section
+                class="rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] transition duration-300 hover:border-brand/40 hover:shadow-[0_24px_48px_-16px_rgba(37,99,235,.18)] p-6 sm:p-8 md:p-10"
+                aria-labelledby="desc">
+                <h2 id="desc" class="mb-4 text-xl font-extrabold tracking-tight">Description</h2>
+                <p class="max-w-3xl leading-relaxed text-slate-600">Servexa is a full-stack field service management
+                    platform that connects customers with technicians. Customers submit service requests, track work
+                    orders, and pay invoices through bKash; technicians update assigned work; administrators manage
+                    users, assignments, invoices, and audit logs.</p>
+            </section>
+
+            <section
+                class="rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] transition duration-300 hover:border-brand/40 hover:shadow-[0_24px_48px_-16px_rgba(37,99,235,.18)] p-6 sm:p-8 md:p-10"
+                aria-labelledby="stack">
+                <h2 id="stack" class="mb-4 text-xl font-extrabold tracking-tight">Main Technology Stack</h2>
+                <div class="flex flex-wrap gap-2.5"><span class="pill">Next.js</span><span
+                        class="pill">React</span><span class="pill">TypeScript</span><span class="pill">Tailwind
+                        CSS</span><span class="pill">TanStack Query</span><span class="pill">React Hook Form</span><span
+                        class="pill">Zod</span><span class="pill">Express.js</span><span
+                        class="pill">Node.js</span><span class="pill">PostgreSQL</span><span class="pill">Prisma
+                        ORM</span><span class="pill">JWT</span><span class="pill">Google OAuth</span><span
+                        class="pill">bKash</span></div>
+            </section>
+
+
+
+            <section
+                class="rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] transition duration-300 hover:border-brand/40 hover:shadow-[0_24px_48px_-16px_rgba(37,99,235,.18)] p-6 sm:p-8 md:p-10"
+                aria-labelledby="feat">
+                <h2 id="feat" class="mb-5 text-xl font-extrabold tracking-tight">Key Features</h2>
+                <ul class="grid gap-4 leading-relaxed text-slate-600 sm:grid-cols-2">
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Customer tools:</strong> register with email or Google, manage
+                            addresses, submit and cancel requests, pay invoices via bKash.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Technician tools:</strong> view assigned jobs, update work-order
+                            status, manage availability.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Admin tools:</strong> manage users, technicians, services,
+                            assignments, invoices, and notifications.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Audit and stats:</strong> audit logs and platform statistics for
+                            admins.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Secure API:</strong> JWT with refresh tokens, role and
+                            object-level authorization, Zod validation, Helmet, rate limiting.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Versioned REST API:</strong> consistent JSON responses with
+                            pagination under /api/v1, documented in Apidog.</span></li>
+                </ul>
+            </section>
+
+            <section
+                class="rounded-[2rem] border border-slate-200/80 bg-white shadow-[0_1px_2px_rgba(15,23,42,.04)] transition duration-300 hover:border-brand/40 hover:shadow-[0_24px_48px_-16px_rgba(37,99,235,.18)] p-6 sm:p-8 md:p-10"
+                aria-labelledby="flow">
+                <h2 id="flow" class="mb-5 text-xl font-extrabold tracking-tight">How It Works</h2>
+                <ol class="grid gap-3 sm:grid-cols-2">
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">1.
+                            Service request</strong><br><span class="text-sm text-slate-600">Customer submits a
+                            request.</span></li>
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">2.
+                            Work order</strong><br><span class="text-sm text-slate-600">Request is reviewed and a work
+                            order is created.</span></li>
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">3.
+                            Assignment</strong><br><span class="text-sm text-slate-600">Admin assigns a
+                            technician.</span></li>
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">4.
+                            Progress</strong><br><span class="text-sm text-slate-600">Technician updates work-order
+                            status.</span></li>
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">5.
+                            Invoice</strong><br><span class="text-sm text-slate-600">An invoice is created for the work
+                            order.</span></li>
+                    <li class="rounded-2xl border border-slate-100 bg-slate-50 p-4"><strong class="text-slate-800">6.
+                            Payment</strong><br><span class="text-sm text-slate-600">bKash payment is verified by the
+                            backend and records are updated.</span></li>
+                </ol>
+                <p class="mt-5 leading-relaxed text-slate-600">A Next.js (App Router) and TypeScript frontend talks to a
+                    modular Express.js and TypeScript API (routes, controllers, services) backed by PostgreSQL through
+                    Prisma, using transactions for multi-step operations.</p>
+            </section>
+
+            <section class="rounded-[2rem] border border-slate-800 bg-slate-900 p-6 text-white shadow-xl sm:p-8 md:p-10"
+                aria-labelledby="chal">
+                <h2 id="chal" class="mb-5 text-xl font-extrabold tracking-tight">Challenges Faced</h2>
+                <ul class="space-y-4 leading-relaxed">
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-white">Multi-role workflow:</strong> coordinating requests, work orders,
+                            technician assignments, and completion across customer, technician, and admin roles.</span>
+                    </li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-white">bKash payments:</strong> linking invoices to payment creation,
+                            callbacks, verification, and status updates.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-white">Access control:</strong> enforcing authentication, role permissions,
+                            and object-level access so users only reach their own resources.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-white">Backend consistency:</strong> keeping API responses, validation,
+                            pagination, and error handling uniform across a modular backend.</span></li>
+                </ul>
+            </section>
+
+            <section class="rounded-[2rem] border-2 border-dashed border-slate-300 bg-transparent p-6 sm:p-8 md:p-10"
+                aria-labelledby="future">
+                <h2 id="future" class="mb-5 text-xl font-extrabold tracking-tight">Potential Improvements &amp; Future
+                    Plans</h2>
+                <ul class="space-y-4 leading-relaxed text-slate-600">
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Automated testing:</strong> expand test coverage for the payment
+                            and work-order flows.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Monitoring:</strong> add logging and observability for the API
+                            and payment callbacks.</span></li>
+                    <li class="flex gap-3"><span class="dot" aria-hidden="true"></span><span><strong
+                                class="text-slate-800">Accessibility and performance:</strong> continue improving both
+                            across dashboards and forms.</span></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-100 bg-white px-5 py-10 sm:px-6 md:py-12">
+        <div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 text-center md:flex-row">
+            <p class="text-sm font-medium text-slate-400">&copy; 2026 Abdul Rehman Aarmaan. All rights reserved.</p>
+            <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                <a href="https://github.com/abdulrehmanaarmaan" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-brand">GitHub</a>
+                <a href="https://www.linkedin.com/in/abdul-rehman-aarmaan" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-brand">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
